@@ -530,6 +530,7 @@ p {
 .photo-panel.with-image,
 .mini-visual.with-image,
 .subpage-visual.with-image,
+.option-visual.with-image,
 .info-model.with-image {
   position: relative;
   background-position: center;
@@ -539,6 +540,7 @@ p {
 .photo-panel.with-image::before,
 .mini-visual.with-image::before,
 .subpage-visual.with-image::before,
+.option-visual.with-image::before,
 .info-model.with-image::before {
   content: "";
   position: absolute;
@@ -548,37 +550,8 @@ p {
     linear-gradient(135deg, rgba(2, 169, 156, 0.2), rgba(255, 118, 95, 0.18));
 }
 
-.mini-visual.with-image {
+.option-visual.with-image {
   position: relative;
-  isolation: isolate;
-  text-shadow: 0 8px 18px rgba(24, 32, 47, 0.4);
-}
-
-.mini-visual.with-image span {
-  position: relative;
-  z-index: 1;
-}
-
-.photo-badge {
-  position: relative;
-  z-index: 1;
-  width: 74px;
-  height: 74px;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.52);
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.22);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 20px 40px rgba(24, 32, 47, 0.22);
-  font-size: 2.8rem;
-}
-
-.photo-badge.large {
-  width: 112px;
-  height: 112px;
-  border-radius: 34px;
-  font-size: 4.4rem;
 }
 
 .card-body {
@@ -770,7 +743,7 @@ p {
   animation: detailFloat 4.8s ease-in-out infinite;
 }
 
-.info-model > span:not(.photo-badge) {
+.info-model > span {
   position: relative;
   z-index: 1;
   padding: 0.45rem 0.8rem;

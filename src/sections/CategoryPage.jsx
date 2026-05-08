@@ -1,5 +1,3 @@
-import Icon from '../components/Icon';
-
 function CategoryPage({ category, options, onBack, onOpenOption }) {
   const pageLabel = ['Dog', 'Cat', 'Bird', 'Fish', 'Rabbit'].includes(category.category)
     ? 'Breeds'
@@ -15,11 +13,7 @@ function CategoryPage({ category, options, onBack, onOpenOption }) {
         <div
           className={`subpage-visual ${category.visual} ${category.image ? 'with-image' : ''}`}
           style={category.image ? { backgroundImage: `url(${category.image})` } : undefined}
-        >
-          <span className="photo-badge large">
-            <Icon value={category.icon} />
-          </span>
-        </div>
+        />
         <div className="subpage-copy">
           <p className="eyebrow">{category.category} {pageLabel}</p>
           <h1>{category.name}</h1>
@@ -41,9 +35,10 @@ function CategoryPage({ category, options, onBack, onOpenOption }) {
             type="button"
             onClick={() => onOpenOption(option.id)}
           >
-            <div className={`option-visual ${option.visual}`}>
-              <Icon value={option.icon} />
-            </div>
+            <div
+              className={`option-visual ${option.visual} ${option.image ? 'with-image' : ''}`}
+              style={option.image ? { backgroundImage: `url(${option.image})` } : undefined}
+            />
             <span className="tag">{pageLabel.slice(0, -1) || 'Option'}</span>
             <h3>{option.title}</h3>
             <p>{option.subtitle}</p>

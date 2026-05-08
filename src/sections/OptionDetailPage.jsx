@@ -1,5 +1,3 @@
-import Icon from '../components/Icon';
-
 function OptionDetailPage({ category, option, onBack, onBrowse }) {
   return (
     <section className="subpage detail-subpage section">
@@ -14,12 +12,9 @@ function OptionDetailPage({ category, option, onBack, onBrowse }) {
 
       <div className="info-stage">
         <div
-          className={`info-model ${option.visual} ${category.image ? 'with-image' : ''}`}
-          style={category.image ? { backgroundImage: `url(${category.image})` } : undefined}
+          className={`info-model ${option.visual} ${option.image ? 'with-image' : ''}`}
+          style={option.image ? { backgroundImage: `url(${option.image})` } : undefined}
         >
-          <span className="photo-badge large">
-            <Icon value={option.icon} />
-          </span>
           <span>{category.category}</span>
         </div>
         <div className="info-copy">

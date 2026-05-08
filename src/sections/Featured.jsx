@@ -1,4 +1,3 @@
-import Icon from '../components/Icon';
 import { catalogItems } from '../data';
 
 function Featured({ onSelectItem }) {
@@ -19,9 +18,7 @@ function Featured({ onSelectItem }) {
             <span
               className={`mini-visual ${item.visual} ${item.image ? 'with-image' : ''}`}
               style={item.image ? { backgroundImage: `url(${item.image})` } : undefined}
-            >
-              <Icon value={item.icon} />
-            </span>
+            />
             <span>
               <strong>{item.name}</strong>
               <small>{item.price}</small>

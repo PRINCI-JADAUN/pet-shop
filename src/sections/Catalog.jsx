@@ -1,5 +1,3 @@
-import Icon from '../components/Icon';
-
 function Catalog({ categories, filter, items, onFilterChange, onOpenCategory }) {
   return (
     <section className="catalog section" id="catalog">
@@ -32,11 +30,7 @@ function Catalog({ categories, filter, items, onFilterChange, onOpenCategory }) 
             <div
               className={`photo-panel ${item.visual} ${item.image ? 'with-image' : ''}`}
               style={item.image ? { backgroundImage: `url(${item.image})` } : undefined}
-            >
-              <span className="photo-badge">
-                <Icon value={item.icon} />
-              </span>
-            </div>
+            />
             <div className="card-body">
               <span className="tag">{item.kind}</span>
               <h3>{item.name}</h3>
