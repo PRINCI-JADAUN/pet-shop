@@ -1,4 +1,35 @@
+import { useState } from 'react';
+import { createContact } from '../api';
+
+const emptyContact = {
+  name: '',
+  phone: '',
+  email: '',
+  interest: 'Adoption',
+  message: '',
+};
+
 function Contact() {
+  const [form, setForm] = useState(emptyContact);
+  const [status, setStatus] = useState('');
+
+  const updateForm = (event) => {
+    const { name, value } = event.target;
+    setForm((current) => ({ ...current, [name]: value }));
+  };
+
+  const sendInquiry = async (event) => {
+    event.preventDefault();
+
+    try {
+      await createContact(form);
+      setForm(emptyContact);
+      setStatus('Inquiry sent. Our team will contact you soon.');
+    } catch (error) {
+      setStatus(`Inquiry was not sent: ${error.message}`);
+    }
+  };
+
   return (
     <section className="contact section" id="contact">
       <div className="section-heading">
@@ -6,18 +37,22 @@ function Contact() {
         <h2>Visit, call, WhatsApp, or book a service appointment</h2>
       </div>
       <div className="contact-layout">
-        <form className="contact-form">
+        <form className="contact-form" onSubmit={sendInquiry}>
           <label>
             Name
-            <input type="text" placeholder="Your name" />
+            <input name="name" type="text" value={form.name} onChange={updateForm} placeholder="Your name" />
           </label>
           <label>
             Phone or WhatsApp
-            <input type="tel" placeholder="+91 98765 43210" />
+            <input name="phone" type="tel" value={form.phone} onChange={updateForm} placeholder="+91 98765 43210" />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" value={form.email} onChange={updateForm} placeholder="you@example.com" />
           </label>
           <label>
             Interested In
-            <select defaultValue="Adoption">
+            <select name="interest" value={form.interest} onChange={updateForm}>
               <option>Adoption</option>
               <option>Products</option>
               <option>Grooming</option>
@@ -28,11 +63,12 @@ function Contact() {
           </label>
           <label>
             Message
-            <textarea rows="5" placeholder="Tell us what you need." />
+            <textarea name="message" rows="5" value={form.message} onChange={updateForm} placeholder="Tell us what you need." />
           </label>
-          <button type="button" className="primary-btn">
+          <button type="submit" className="primary-btn">
             Send Inquiry
           </button>
+          {status && <p className="admin-status">{status}</p>}
         </form>
 
         <aside className="contact-card">

@@ -1,0 +1,125 @@
+{
+  "products": [
+    {
+      "_id": "dog",
+      "slug": "dog",
+      "name": "Bruno",
+      "category": "Dog",
+      "kind": "Adoption",
+      "price": "Adoption fee: INR 2,500",
+      "numericPrice": 2500,
+      "stock": 1,
+      "status": "Ready for home visit",
+      "care": "Daily walks, brushing twice weekly, vaccination record included.",
+      "image": "/images/dog.jpg",
+      "visual": "visual-dog"
+    },
+    {
+      "_id": "cat",
+      "slug": "cat",
+      "name": "Luna",
+      "category": "Cat",
+      "kind": "Adoption",
+      "price": "Adoption fee: INR 1,800",
+      "numericPrice": 1800,
+      "stock": 1,
+      "status": "Vaccinated",
+      "care": "Indoor home, litter trained, calm evening routine preferred.",
+      "image": "/images/cat.jpg",
+      "visual": "visual-cat"
+    },
+    {
+      "_id": "food",
+      "slug": "food",
+      "name": "Balanced Pet Food",
+      "category": "Food",
+      "kind": "Product",
+      "price": "From INR 399",
+      "numericPrice": 399,
+      "stock": 18,
+      "status": "Best seller",
+      "care": "Vet-guided nutrition packs with portion suggestions.",
+      "image": "/images/food.jpg",
+      "visual": "visual-food"
+    },
+    {
+      "_id": "toys",
+      "slug": "toys",
+      "name": "Play & Enrichment Toys",
+      "category": "Toys",
+      "kind": "Product",
+      "price": "From INR 149",
+      "numericPrice": 149,
+      "stock": 32,
+      "status": "New arrivals",
+      "care": "Chew-safe, puzzle, feather, rope, and activity toys.",
+      "image": "/images/toys.jpg",
+      "visual": "visual-toys"
+    }
+  ],
+  "orders": [
+    {
+      "_id": "order-1001",
+      "customer": {
+        "name": "Aarav Sharma"
+      },
+      "totalAmount": 2500,
+      "paymentStatus": "pending",
+      "orderStatus": "placed",
+      "createdAt": "2026-05-08T09:30:00.000Z"
+    },
+    {
+      "_id": "order-1002",
+      "customer": {
+        "name": "Maya Kapoor"
+      },
+      "totalAmount": 899,
+      "paymentStatus": "paid",
+      "orderStatus": "confirmed",
+      "createdAt": "2026-05-08T11:45:00.000Z"
+    }
+  ],
+  "contacts": [
+    {
+      "_id": "c7f54f16-2018-4ab5-8a5f-cc70fc2ea3c0",
+      "name": "sapna",
+      "email": "sapna@gmail.com",
+      "phone": "65411654512",
+      "interest": "Training",
+      "message": "i wnat to tain my dog",
+      "status": "accepted",
+      "createdAt": "2026-05-11T08:36:43.451Z",
+      "updatedAt": "2026-05-11T08:37:09.405Z"
+    },
+    {
+      "_id": "f575997c-7e14-40d6-be66-686a72ffc91c",
+      "name": "Princi",
+      "email": "jadaunprinci11@gmail.com",
+      "phone": "8791391891",
+      "interest": "Grooming",
+      "message": "hey",
+      "status": "new",
+      "createdAt": "2026-05-11T08:35:27.661Z"
+    },
+    {
+      "_id": "message-1001",
+      "name": "Riya Mehta",
+      "email": "riya@example.com",
+      "phone": "+91 90000 22222",
+      "interest": "Grooming",
+      "message": "I want to book a grooming appointment for my dog.",
+      "status": "new",
+      "createdAt": "2026-05-08T10:10:00.000Z"
+    },
+    {
+      "_id": "message-1002",
+      "name": "Kabir Rao",
+      "email": "kabir@example.com",
+      "phone": "+91 90000 33333",
+      "interest": "Products",
+      "message": "Do you have aquarium starter kits available?",
+      "status": "read",
+      "createdAt": "2026-05-08T12:15:00.000Z"
+    }
+  ]
+}

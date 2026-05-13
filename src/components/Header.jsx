@@ -1,6 +1,6 @@
 import { navItems } from '../data';
 
-function Header({ onNavigateHome }) {
+function Header({ onNavigateHome, onOpenAdmin }) {
   return (
     <header className="site-header">
       <nav className="navbar">
@@ -18,6 +18,9 @@ function Header({ onNavigateHome }) {
         <a className="nav-cta" href="#contact" onClick={onNavigateHome}>
           Book Visit
         </a>
+        <button className="admin-link" type="button" onClick={onOpenAdmin}>
+          Admin
+        </button>
       </nav>
     </header>
   );
