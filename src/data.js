@@ -1,3 +1,12 @@
+import dogImage from './assets/dog.jpg';
+import catImage from './assets/cat.jpg';
+import birdImage from './assets/bird.jpg';
+import fishImage from './assets/fish.jpg';
+import rabbitImage from './assets/rabbit.jpg';
+import foodImage from './assets/food.jpg';
+import toysImage from './assets/toys.jpg';
+import accessoriesImage from './assets/accessories.jpg';
+
 export const navItems = [
   { label: 'Home', href: '#home' },
   { label: 'Pets & Products', href: '#catalog' },
@@ -18,7 +27,7 @@ export const catalogItems = [
     breed: 'Golden Retriever mix',
     care: 'Daily walks, brushing twice weekly, vaccination record included.',
     visual: 'visual-dog',
-    image: '/images/dog.jpg',
+    image: dogImage,
     icon: '&#128021;',
     status: 'Ready for home visit',
   },
@@ -32,7 +41,7 @@ export const catalogItems = [
     breed: 'Domestic short hair',
     care: 'Indoor home, litter trained, calm evening routine preferred.',
     visual: 'visual-cat',
-    image: '/images/cat.jpg',
+    image: catImage,
     icon: '&#128008;',
     status: 'Vaccinated',
   },
@@ -46,7 +55,7 @@ export const catalogItems = [
     breed: 'Budgie',
     care: 'Social cage setup, fresh seed blend, gentle handling practice.',
     visual: 'visual-bird',
-    image: '/images/bird.jpg',
+    image: birdImage,
     icon: '&#129436;',
     status: 'Hand trained',
   },
@@ -60,7 +69,7 @@ export const catalogItems = [
     breed: 'Guppy pair',
     care: 'Filtered tank, weekly water checks, peaceful community setup.',
     visual: 'visual-fish',
-    image: '/images/fish.jpg',
+    image: fishImage,
     icon: '&#128032;',
     status: 'Starter friendly',
   },
@@ -74,7 +83,7 @@ export const catalogItems = [
     breed: 'Mini lop mix',
     care: 'Hay-rich diet, soft floor area, supervised playtime.',
     visual: 'visual-rabbit',
-    image: '/images/rabbit.jpg',
+    image: rabbitImage,
     icon: '&#128007;',
     status: 'Gentle temperament',
   },
@@ -88,7 +97,7 @@ export const catalogItems = [
     breed: 'Dogs, cats, birds, fish',
     care: 'Vet-guided nutrition packs with portion suggestions.',
     visual: 'visual-food',
-    image: '/images/food.jpg',
+    image: foodImage,
     icon: '&#129368;',
     status: 'Best seller',
   },
@@ -102,7 +111,7 @@ export const catalogItems = [
     breed: 'Multi-pet range',
     care: 'Chew-safe, puzzle, feather, rope, and activity toys.',
     visual: 'visual-toys',
-    image: '/images/toys.jpg',
+    image: toysImage,
     icon: '&#127922;',
     status: 'New arrivals',
   },
@@ -116,7 +125,7 @@ export const catalogItems = [
     breed: 'Beds, bowls, leashes, tanks',
     care: 'Durable daily essentials selected by our care team.',
     visual: 'visual-accessories',
-    image: '/images/accessories.jpg',
+    image: accessoriesImage,
     icon: '&#127968;',
     status: 'In stock',
   },

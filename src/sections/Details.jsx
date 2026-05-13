@@ -1,12 +1,11 @@
 import Icon from '../components/Icon';
-import myPetImage from '../assets/pet.jpg';
 
 function Details({ item }) {
   return (
-        <section className="details section" id="details">
+    <section className="details section" id="details">
       <div className="detail-card">
         <div className={`detail-visual ${item.visual}`}>
-          <img src={myPetImage} alt="Pet" />  {/* Replace or add alongside Icon */}
+          <img src="/images/pet.jpg" alt="Pet" />
           <Icon value={item.icon} />
         </div>
         <div className="detail-copy">

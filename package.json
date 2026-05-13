@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://princi-jadaun.github.io/pet-shop/",
   "scripts": {
     "dev": "vite",
     "backend": "node backend/server.js",
